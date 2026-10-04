@@ -138,4 +138,3 @@ This is a non-commercial fan-made portfolio and is not affiliated with or endors
 - GitHub: [@Buzzkara71](https://github.com/Buzzkara71)
 - LinkedIn: [linkedin.com/in/buzzkara](https://www.linkedin.com/in/buzzkara)
 - Instagram: [@ba_skraaa](https://www.instagram.com/ba_skraaa/)
-# Baskara-s-Persona-Portofolio

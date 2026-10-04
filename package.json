@@ -1,0 +1,16 @@
+{
+  "name": "baskara-persona-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A JRPG-inspired personal portfolio. Static HTML, CSS and JavaScript.",
+  "scripts": {
+    "build:css": "esbuild src/style.css --minify --target=chrome100,firefox100,safari15 --outfile=assets/css/style.css",
+    "build:js": "esbuild src/main.js --minify --format=iife --target=es2020 --outfile=assets/js/main.js",
+    "build": "npm run build:css && npm run build:js",
+    "start": "serve -l 5500 ."
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "serve": "^14.2.0"
+  }
+}

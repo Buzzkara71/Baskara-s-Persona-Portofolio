@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Baskara Persona's Portfolio</title>
+  <meta name="description" content="Portfolio of Baskara Dwipa Raharja, IT Technician Support based in Tanjungpinang–Batam: experience, skills, profile and contact.">
+  <meta name="theme-color" content="#0a1660">
+  <meta property="og:title" content="Baskara Persona's Portfolio">
+  <meta property="og:description" content="Portfolio of Baskara Dwipa Raharja, IT Technician Support.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800;1,900&family=Barlow:ital,wght@0,400;0,600;1,500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800;1,900&family=Barlow:ital,wght@0,400;0,600;1,500&display=swap"></noscript>
+
+  <link rel="preload" href="assets/img/menu-bg-poster.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body data-scene="menu">
+
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <div id="loader" role="status" aria-live="polite">
+    <div class="load-box">
+      <p id="loadText">NOW LOADING...</p>
+      <div class="load-bar">
+        <div class="load-track"><div class="load-fill" id="loadFill"></div></div>
+        <span class="load-pct" id="loadPct">0%</span>
+      </div>
+      <button type="button" class="press" id="pressStart" hidden>PRESS ANY KEY</button>
+    </div>
+    <p class="load-credit">♪ “Color Your Night” — Persona 3 Reload OST. © ATLUS © SEGA. All rights reserved. Fan-made portfolio, not affiliated with ATLUS or SEGA.</p>
+  </div>
+
+  <div class="hud-date" aria-label="Today's date and moon phase">
+    <canvas id="moonIcon" width="60" height="60" aria-hidden="true"></canvas>
+    <div><span id="hudDate">--/--</span><small id="hudPhase">—</small></div>
+  </div>
+  <div class="topname" id="topName"></div>
+
+  <div class="audio-ctl">
+    <button type="button" class="bgm" id="bgmBtn" aria-pressed="true">
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="bgm-txt"><small>BGM</small><b id="bgmTitle">Color Your Night</b></span>
+    </button>
+    <button type="button" class="sfx" id="sfxBtn" aria-pressed="true">SFX ON</button>
+  </div>
+
+  <audio id="bgm" loop preload="metadata">
+    <source src="assets/audio/color-your-night.ogg" type="audio/ogg; codecs=opus">
+    <source src="assets/audio/color-your-night.m4a" type="audio/mp4">
+  </audio>
+
+  <main id="stage">
+    <section class="scene" id="menu" aria-label="Main menu">
+      <div class="menu-bg" aria-hidden="true">
+        <video id="menuVideo" poster="assets/img/menu-bg-poster.webp" muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback>
+          <source src="assets/video/menu-bg.webm" type="video/webm">
+          <source src="assets/video/menu-bg.mp4" type="video/mp4">
+        </video>
+      </div>
+      <nav class="menu" id="menuNav">
+        <button type="button" data-go="experience"><span>EXPERIENCE</span></button>
+        <button type="button" data-go="skills"><span>SKILLS</span></button>
+        <button type="button" data-go="about"><span>ABOUT</span></button>
+        <button type="button" data-go="contact"><span>CONTACT</span></button>
+      </nav>
+    </section>
+
+    <section class="scene panel" id="experience" aria-label="Experience">
+      <div class="title-bar"><span class="eyebrow" data-name></span><h2>EXPERIENCE</h2></div>
+      <div class="exp-wrap">
+        <ol class="exp-list" id="expList"></ol>
+        <article class="exp-detail" id="expDetail" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <section class="scene panel" id="skills" aria-label="Skills">
+      <div class="title-bar"><span class="eyebrow" data-name></span><h2>SKILLS</h2></div>
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <h3 class="sk-head" id="skHead"></h3>
+      <ul class="sk-list" id="skList"></ul>
+    </section>
+
+    <section class="scene panel" id="about" aria-label="About">
+      <div class="title-bar"><span class="eyebrow" data-name></span><h2>ABOUT</h2></div>
+      <div class="about-card" id="aboutCard"></div>
+    </section>
+
+    <section class="scene panel" id="contact" aria-label="Contact">
+      <div class="panel-inner">
+        <div class="mail">
+          <h2>MAIL</h2>
+          <div class="mail-box" id="mailBox"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="hints" id="hints"></div>
+  <div class="toast" id="toast" role="status">COPIED</div>
+  <div id="wipe" aria-hidden="true"></div>
+
+  <noscript><p class="noscript">Please enable JavaScript to view this portfolio.</p></noscript>
+</body>
+</html>
