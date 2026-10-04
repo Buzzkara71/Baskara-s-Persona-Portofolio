@@ -29,17 +29,31 @@ window.CONFIG = {
     { soon: true },
     { soon: true }
   ],
-  // Rank is 1–10; 10 displays as MAX.
+  // Each skill: [name, short description of what you do with it].
   skills: [
-    { tab: "FRONTEND", heading: "Frontend & Web Engineering", items: [
-      ["JavaScript / TypeScript", 9], ["React · Next.js", 8], ["HTML5 · Modern CSS · Tailwind", 10],
-      ["Svelte · Vue 3", 7], ["Canvas · WebGL", 6], ["UI/UX Design · Figma", 8] ] },
-    { tab: "BACKEND", heading: "Backend & Data", items: [
-      ["Node.js · Express", 7], ["REST & GraphQL APIs", 7], ["PostgreSQL · Prisma", 6], ["Firebase · Supabase", 7] ] },
-    { tab: "TOOLS", heading: "Workflow & Tools", items: [
-      ["Git · GitHub Actions", 8], ["Vite · Webpack", 7], ["Testing · Vitest · Playwright", 6], ["Linux & Terminal", 7] ] },
-    { tab: "LANGUAGES", heading: "Language Proficiency", items: [
-      ["Bahasa Indonesia (Native)", 10], ["English (Professional Working)", 8], ["English (Technical Writing)", 8], ["Japanese (Basic)", 4] ] }
+    { tab: "HARDWARE", heading: "Hardware & Peripherals", items: [
+      ["PC & Laptop Troubleshooting", "Diagnose boot, performance and component faults, then repair or replace parts to get users working again."],
+      ["Workstation Setup", "Assemble, upgrade and deploy desktops and laptops ready for daily operations."],
+      ["Printer & Peripheral Setup", "Install, configure and maintain printers, scanners, monitors and input devices."],
+      ["CCTV & Device Maintenance", "Run routine checks and first-line fixes on cameras and operational devices."]
+    ] },
+    { tab: "NETWORK", heading: "Networking", items: [
+      ["LAN & Wi-Fi Troubleshooting", "Trace connectivity issues across cables, switches and access points."],
+      ["Network Cabling", "Crimp, test and organize UTP cabling for workstations and devices."],
+      ["IP Configuration", "Set up IP addressing and check DHCP and DNS when devices can't connect."]
+    ] },
+    { tab: "SYSTEMS", heading: "Systems & User Support", items: [
+      ["Helpdesk Support", "Handle user tickets, explain fixes clearly and follow issues through to resolution."],
+      ["Windows Installation & Setup", "Install, update and configure Windows and the software users need."],
+      ["User Account Management", "Create and maintain user accounts, access and passwords."],
+      ["Microsoft Office", "Support Word, Excel and Outlook for everyday office work."]
+    ] },
+    { tab: "PROFESSIONAL", heading: "Professional Skills", items: [
+      ["Communication & Presentation", "Explain technical and business topics clearly to different audiences."],
+      ["Market Research", "Gather and summarize market and prospect information to support decisions."],
+      ["Client Outreach", "Reach out to potential partners and prepare proposals and follow-ups."],
+      ["Teamwork", "Work across teams with integrity and take responsibility for shared goals."]
+    ] }
   ],
   about: {
     bio: [

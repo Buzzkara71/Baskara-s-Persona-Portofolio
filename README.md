@@ -118,7 +118,7 @@ npm run build
 
 This is a static site, so any static host works.
 
-**Vercel:** push the project to GitHub, import the repository in Vercel, choose the **Other** framework preset and deploy. The included `vercel.json` skips the build step and adds long-term caching for media files. The Vercel CLI also works: run `npx vercel --prod` from the project folder.
+**Vercel:** push the project to GitHub, import the repository in Vercel, choose the **Other** framework preset and deploy. Make sure `index.html` sits at the repository root (or set **Root Directory** to the folder that contains it). Vercel runs `npm run build` automatically, and the included `vercel.json` adds long-term caching for media files. The Vercel CLI also works: run `npx vercel --prod` from the project folder.
 
 **GitHub Pages / Netlify:** publish the project root as-is. No build command is needed.
 

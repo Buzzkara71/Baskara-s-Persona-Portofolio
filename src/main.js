@@ -220,10 +220,12 @@ function renderSkills(i) {
     t.setAttribute("aria-selected", j === i);
   });
   $("#skHead").textContent = group.heading;
-  $("#skList").innerHTML = group.items.map(([name, rank], j) => `
-    <li class="sk-row" style="--i:${j}"><span>${esc(name)}</span>
-      <div class="bar" role="meter" aria-label="${esc(name)}" aria-valuemin="0" aria-valuemax="10" aria-valuenow="${rank}"><i style="--v:${rank};--i:${j}"></i></div>
-      <b class="rank${rank >= 10 ? " max" : ""}">${rank >= 10 ? "MAX" : "RANK " + rank}</b></li>`).join("");
+  $("#skList").innerHTML = group.items.map(([name, desc], j) => `
+    <li class="sk-card" style="--i:${j}">
+      <span class="sk-num">${String(j + 1).padStart(2, "0")}</span>
+      <h4>${esc(name)}</h4>
+      <p>${esc(desc)}</p>
+    </li>`).join("");
 }
 
 const initials = CONFIG.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("");
